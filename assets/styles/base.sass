@@ -76,6 +76,12 @@ footer
           i:hover
             color: #3C6E71
 
+header
+  constrainer
+    div
+      a
+        text-decoration: none
+
 @media only (min-width: 601px)
   a#header
     display: none
@@ -84,10 +90,31 @@ footer
     justify-content: center
     width: 100%
     position: static
-
-header
-  a
-    text-decoration: none
+    background: #012631
+    constrainer
+      padding: 20px
+      display: grid
+      grid-template-columns: minmax(0, 1fr) 1fr
+      align-items: center
+      div.left
+        display: block
+        a
+          img
+            width: 60px
+      div.right
+        display: flex
+        flex-direction: row-reverse
+        justify-content: space-around
+        a
+          padding: 7px 15px 7px 15px
+          margin: 0px 2px 0px 2px
+          color: white
+          border-radius: 5px
+          transition: background-color 0.15s ease
+        a.home
+          display: none
+        a:hover
+          background: #3C6E71
 
 @media only (max-width: 600px)
   footer
@@ -119,7 +146,7 @@ header
     justify-content: center
     width: 50px
     height: 50px
-    background: #284b63
+    background: #012631
     border-radius: 5px
     z-index: 2
     font-size: 35px
@@ -174,16 +201,25 @@ header
     transition: left 0.25s
     z-index: 1
     constrainer
+      display: block
       height: calc(100% - 110px)
       width: 100%
       box-sizing: border-box
-      display: flex
       padding: 40px 40px 0 40px
-      flex-direction: column-reverse
-      overflow-y: scroll
-      a
-        color: white
-        margin: 10px 0 10px 0
-        font-size: 2rem
+      div.left
+        display: none
+      div.right
+        display: flex
+        justify-content: flex-start
+        flex-direction: column-reverse
+        overflow-y: scroll
+        height: 100%
+        width: 100%
+        a
+          color: white
+          margin: 10px 0 10px 0
+          font-size: 2rem
+        a.home
+          display: inline
   header.shown
     left: 0vw

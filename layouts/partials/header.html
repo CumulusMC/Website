@@ -1,11 +1,16 @@
 <a id="header"><div class="icon"><div class="inner"></div></div></a>
 <header>
   <constrainer>
-    <a href="{{ .Site.BaseURL }}">Home</a>
-    <a href="{{ "mods" | absURL }}">Mods</a>
-    <a href="{{ "about" | absURL }}">About</a>
-    <a href="{{ "blog" | absURL }}">Blog</a>
-    <a href="{{ "wiki" | absURL }}">Wiki</a>
-    <a href="{{ "contact" | absURL }}">Contact</a>
+    <div class="left">
+      <a href="{{ .Site.BaseURL }}"><img src="{{ "cumulus_light_grey.svg" | absURL }}"></img></a>
+    </div>
+    <div class="right">
+      <a href="{{ .Site.BaseURL }}" class="home">Home</a>
+      <a href="{{ "mods" | absURL }}">Mods</a>
+      <a href="{{ "about" | absURL }}">About</a>
+      <a href="{{ "blog" | absURL }}">Blog</a>
+      <a href="{{ "wiki" | absURL }}">Wiki</a>
+      <a href="{{ "contact" | absURL }}">Contact</a>
+    </div>
   </constrainer>
 </header>
