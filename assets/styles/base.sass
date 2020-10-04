@@ -67,7 +67,7 @@ footer
         i
           font-size: 14px
           color: #3C6E71
-      div.socials
+      div.links
         a
           margin: 0 10px 0 10px
           i
@@ -107,8 +107,8 @@ header
         flex-direction: column
         justify-content: center
         align-items: center
-        div.socials
-          margin-top: 10px
+        div.links
+          margin-top: 15px
 
   a#header
     position: fixed
@@ -166,7 +166,7 @@ header
   header
     min-width: 70vw
     max-width: 90vw
-    height: 100vh
+    top: 0
     position: fixed
     bottom: 0
     left: -100vw
@@ -174,12 +174,13 @@ header
     transition: left 0.25s
     z-index: 1
     constrainer
-      height: calc(100vh - 70px)
+      height: calc(100vh - 110px)
       width: 100%
       box-sizing: border-box
       display: flex
-      padding: 40px
+      padding: 40px 40px 0 40px
       flex-direction: column-reverse
+      overflow-y: scroll
       a
         color: white
         margin: 10px 0 10px 0
