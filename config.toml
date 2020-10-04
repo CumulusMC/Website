@@ -1,0 +1,7 @@
+baseURL = "http://cumulusmc.com/"
+languageCode = "en-us"
+title = "Cumulus"
+
+[permalinks]
+  about = "/:filename/"
+  contact = "/:filename/"

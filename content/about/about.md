@@ -1,0 +1,3 @@
+/*
+An empty file to coerce Hugo into building the about page
+*/

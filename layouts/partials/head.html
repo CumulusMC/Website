@@ -1,0 +1,8 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "styles/main.sass" | resources.ToCSS $options }}
+  <link rel="stylesheet" href="/fontawesome/css/all.css"></link>
+  <link rel="stylesheet" href="{{ $style.Permalink }}"></link>
+  <script src="/main.js" charset="utf-8"></script>
+</head>

@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <p>Blog baybee</p>
+  {{ range .Pages }}
+    <p>{{ .Permalink }}</p>
+  {{ end }}
+{{ end }}
