@@ -1,5 +1,12 @@
 {{ define "identifier" }}mod{{ end }}
 
+{{ define "extra-head" }}
+  <meta name="og:title" content="{{ .Params.name }}">
+  <meta name="og:description" content="{{ .Params.description }}">
+  <meta name="og:image" content="{{ absURL (printf "mods/%s-header.png" .Params.namespace) }}">
+  <title>{{ .Site.Title }} | {{ .Params.name }}</title>
+{{ end }}
+
 {{ define "main" }}
   <constrainer>
     <header>
@@ -13,7 +20,6 @@
       {{ .Content }}
     </content>
     <sidebar>
-      <p>Shit</p>
     </sidebar>
   </constrainer>
 {{ end }}

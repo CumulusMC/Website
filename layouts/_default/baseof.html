@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  {{- partial "head.html" . -}}
+  <head>
+    {{- partial "head.html" . -}}
+    {{- block "extra-head" . -}}{{- end -}}
+  </head>
   <body class="{{- block "identifier" . -}}{{- end -}}">
     {{- partial "header.html" . -}}
     <main>{{- block "main" . -}}{{- end -}}</main>
