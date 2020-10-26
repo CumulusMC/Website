@@ -1,5 +1,5 @@
 *
-  font-family: "Nunito", sans-serif
+  font-family: "Nunito Sans", sans-serif
 
 html
   margin: 0px
@@ -119,6 +119,19 @@ body >
             display: none
           a:hover
             background: #3C6E71
+  body.mod > main > constrainer
+    grid-template-columns: auto minmax(0px, 800px) 20px minmax(0px, 200px) auto
+    grid-template-rows: 40px min-content 20px auto
+    header
+      img
+        width: 75px
+        height: 75px
+      div.text
+        margin-left: 20px
+    sidebar
+      grid-column: 4 / 5
+      grid-row: 4 / 5
+
 
 @media only (max-width: 600px)
   body >
@@ -230,11 +243,19 @@ body >
       left: 0vw
 
   body.mod > main > constrainer
-    grid-template-columns: auto minmax(0px, 800px) auto !important
-    grid-template-rows: 40px min-content 20px auto 20px auto !important
+    grid-template-columns: auto minmax(0px, 800px) auto
+    grid-template-rows: 40px min-content 20px auto 20px auto
     sidebar
-      grid-column: 2 / 3 !important
-      grid-row: 5 / 6 !important
+      grid-column: 2 / 3
+      grid-row: 5 / 6
+    header
+      flex-direction: column
+      img
+        width: 150px
+        height: 150px
+      div.text
+        margin-top: 20px
+        margin-left: 0px
 
 
 content
@@ -252,8 +273,6 @@ content
 
 body.mod > main > constrainer
   display: grid
-  grid-template-columns: auto minmax(0px, 800px) 20px minmax(0px, 200px) auto
-  grid-template-rows: 40px min-content 20px auto
   padding: 0 20px
   width: calc(100vw - 40px)
   header
@@ -262,11 +281,8 @@ body.mod > main > constrainer
     display: flex
     align-items: center
     img
-      width: 75px
-      height: 75px
       border-radius: 10%
     div.text
-      margin-left: 20px
       p.title
         font-weight: bold
         font-size: 30px
@@ -276,8 +292,4 @@ body.mod > main > constrainer
         color: #3C6E71
   content
     grid-column: 2 / 3
-    grid-row: 4 / 5
-
-  sidebar
-    grid-column: 4 / 5
     grid-row: 4 / 5
