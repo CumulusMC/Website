@@ -20,206 +20,264 @@ constrainer
   display: block
   width: 100vw
   max-width: 1000px
+  margin: 0 auto
 
-footer
-  width: 100%
-  background: white
-  color: #141414
-  padding: 20px
-  box-sizing: border-box
-  display: flex
-  justify-content: center
-  constrainer
-    div.top
-      display: grid
-      grid-template-columns: 1fr 3fr
-      div.icon
-        grid-column: 1 / 2
-        a
-          img
-            width: 60px
-      div.columns
-        grid-column: 2 / 3
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        div.column
-          display: flex
-          flex-direction: column
-          p.title
-            font-size: 18px
-            margin-bottom: 5px
-            font-weight: 600
-            color: #141414
-          a
-            font-size: 14px
-            color: #3C6E71
-            margin: 5px 0 5px 0
-            text-decoration: none
-            font-weight: 600
-    div.bottom
-      margin-top: 15px
-      display: flex
-      align-items: baseline
-      justify-content: space-between
-      p
-        text-align: center
-        font-weight: 600
-        i
-          font-size: 14px
-          color: #3C6E71
-      div.links
-        a
-          margin: 0 10px 0 10px
-          i
-            color: #d9d9d9
-            font-size: 30px
-          i:hover
-            color: #3C6E71
-
-header
-  constrainer
-    div
-      a
-        text-decoration: none
-
-@media only (min-width: 601px)
-  a#header
-    display: none
-  header
+body >
+  footer
+    width: 100%
+    background: white
+    color: #141414
+    padding: 20px
+    box-sizing: border-box
     display: flex
     justify-content: center
-    width: 100%
-    position: static
-    background: #012631
-    constrainer
-      padding: 20px
-      display: grid
-      grid-template-columns: minmax(0, 1fr) 1fr
-      align-items: center
-      div.left
-        display: block
-        a
-          img
-            width: 60px
-      div.right
-        display: flex
-        flex-direction: row-reverse
-        justify-content: space-around
-        a
-          padding: 7px 15px 7px 15px
-          margin: 0px 2px 0px 2px
-          color: white
-          border-radius: 5px
-          transition: background-color 0.15s ease
-        a.home
-          display: none
-        a:hover
-          background: #3C6E71
-
-@media only (max-width: 600px)
-  footer
     constrainer
       div.top
-        grid-template-columns: 0fr 1fr
+        display: grid
+        grid-template-columns: 1fr 3fr
         div.icon
-          display: none
+          grid-column: 1 / 2
+          a
+            img
+              width: 60px
         div.columns
-          grid-template-columns: auto
-          grid-template-rows: repeat(3, auto)
+          grid-column: 2 / 3
+          display: grid
+          grid-template-columns: repeat(3, 1fr)
           div.column
-            margin: 10px 0 10px 0
-            justify-content: center
-            align-items: center
+            display: flex
+            flex-direction: column
+            p.title
+              font-size: 18px
+              margin-bottom: 5px
+              font-weight: 600
+              color: #141414
+            a
+              font-size: 14px
+              color: #3C6E71
+              margin: 5px 0 5px 0
+              text-decoration: none
+              font-weight: 600
       div.bottom
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        margin-top: 15px
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        p
+          text-align: center
+          font-weight: 600
+          i
+            font-size: 14px
+            color: #3C6E71
         div.links
-          margin-top: 15px
+          a
+            margin: 0 10px 0 10px
+            i
+              color: #d9d9d9
+              font-size: 30px
+            i:hover
+              color: #3C6E71
 
-  a#header
-    position: fixed
-    bottom: 40px
-    left: 40px
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 50px
-    height: 50px
-    background: #012631
-    border-radius: 5px
-    z-index: 2
-    font-size: 35px
-    color: white
-    transition: border-radius 0.25s
-    div.icon
+body >
+  header
+    constrainer
+      div
+        a
+          text-decoration: none
+
+@media only (min-width: 601px)
+  body >
+    a#header
+      display: none
+    header
       display: flex
-      position: relative
+      justify-content: center
+      width: 100%
+      position: static
+      background: #012631
+      constrainer
+        padding: 20px
+        display: grid
+        grid-template-columns: minmax(0, 1fr) 1fr
+        align-items: center
+        div.left
+          display: block
+          a
+            img
+              width: 60px
+        div.right
+          display: flex
+          flex-direction: row-reverse
+          justify-content: space-around
+          a
+            padding: 7px 15px 7px 15px
+            margin: 0px 2px 0px 2px
+            color: white
+            border-radius: 5px
+            transition: background-color 0.15s ease
+          a.home
+            display: none
+          a:hover
+            background: #3C6E71
+
+@media only (max-width: 600px)
+  body >
+    footer
+      constrainer
+        div.top
+          grid-template-columns: 0fr 1fr
+          div.icon
+            display: none
+          div.columns
+            grid-template-columns: auto
+            grid-template-rows: repeat(3, auto)
+            div.column
+              margin: 10px 0 10px 0
+              justify-content: center
+              align-items: center
+        div.bottom
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          div.links
+            margin-top: 15px
+
+    a#header
+      position: fixed
+      bottom: 40px
+      left: 40px
+      display: flex
       align-items: center
       justify-content: center
-      width: 35px
-      height: 35px
-      .inner
-        &, &::before, &::after
-          width: 100%
-          height: 5px
-          position: absolute
-          background-color: white
-          border-radius: 5px
-        &::before, &::after
-          content: ""
-          display: block
-        &::before
-          top: 11px
-          transition: top 0.075s 0.12s linear, opacity 0.075s linear
-        &::after
-          bottom: 11px
-          transition: bottom 0.075s 0.12s linear, transform 0.075s linear
-        &
-          transition: transform 0.075s linear
-    &.shown
-      border-radius: 50px
+      width: 50px
+      height: 50px
+      background: #012631
+      border-radius: 5px
+      z-index: 2
+      font-size: 35px
+      color: white
+      transition: border-radius 0.25s
       div.icon
-        div.inner
-          transform: rotate(45deg)
-          transition-delay: 0.12s
-          &::before
-            top: 0
-            transition: top 0.075s linear
-          &::after
-            bottom: 0
-            transform: rotate(-90deg)
-            transition: bottom 0.075s linear, transform 0.075s 0.12s linear
-  header
-    position: fixed
-    min-width: 70vw
-    max-width: 90vw
-    top: 0
-    bottom: 0
-    left: -100vw
-    background: #141414
-    transition: left 0.25s
-    z-index: 1
-    constrainer
-      display: block
-      height: calc(100% - 110px)
-      width: 100%
-      box-sizing: border-box
-      padding: 40px 40px 0 40px
-      div.left
-        display: none
-      div.right
         display: flex
-        justify-content: flex-start
-        flex-direction: column-reverse
-        overflow-y: scroll
-        height: 100%
+        position: relative
+        align-items: center
+        justify-content: center
+        width: 35px
+        height: 35px
+        .inner
+          &, &::before, &::after
+            width: 100%
+            height: 5px
+            position: absolute
+            background-color: white
+            border-radius: 5px
+          &::before, &::after
+            content: ""
+            display: block
+          &::before
+            top: 11px
+            transition: top 0.075s 0.12s linear, opacity 0.075s linear
+          &::after
+            bottom: 11px
+            transition: bottom 0.075s 0.12s linear, transform 0.075s linear
+          &
+            transition: transform 0.075s linear
+      &.shown
+        border-radius: 50px
+        div.icon
+          div.inner
+            transform: rotate(45deg)
+            transition-delay: 0.12s
+            &::before
+              top: 0
+              transition: top 0.075s linear
+            &::after
+              bottom: 0
+              transform: rotate(-90deg)
+              transition: bottom 0.075s linear, transform 0.075s 0.12s linear
+    header
+      position: fixed
+      min-width: 70vw
+      max-width: 90vw
+      top: 0
+      bottom: 0
+      left: -100vw
+      background: #141414
+      transition: left 0.25s
+      z-index: 1
+      constrainer
+        display: block
+        height: calc(100% - 110px)
         width: 100%
-        a
-          color: white
-          margin: 10px 0 10px 0
-          font-size: 2rem
-        a.home
-          display: inline
-  header.shown
-    left: 0vw
+        box-sizing: border-box
+        padding: 40px 40px 0 40px
+        div.left
+          display: none
+        div.right
+          display: flex
+          justify-content: flex-start
+          flex-direction: column-reverse
+          overflow-y: scroll
+          height: 100%
+          width: 100%
+          a
+            color: white
+            margin: 10px 0 10px 0
+            font-size: 2rem
+          a.home
+            display: inline
+    header.shown
+      left: 0vw
+
+  body.mod > main > constrainer
+    grid-template-columns: auto minmax(0px, 800px) auto !important
+    grid-template-rows: 40px min-content 20px auto 20px auto !important
+    sidebar
+      grid-column: 2 / 3 !important
+      grid-row: 5 / 6 !important
+
+
+content
+  p
+    margin: 1em 0
+    color: #141414
+  h1, h2, h3, h4, h5, h6
+    margin: 0.25em 0
+  a
+    color: #3C6E71
+  a:visited
+    color: #012631
+
+/* Styles specific to mod pages */
+
+body.mod > main > constrainer
+  display: grid
+  grid-template-columns: auto minmax(0px, 800px) 20px minmax(0px, 200px) auto
+  grid-template-rows: 40px min-content 20px auto
+  padding: 0 20px
+  width: calc(100vw - 40px)
+  header
+    grid-column: 2 / 3
+    grid-row: 2 / 3
+    display: flex
+    align-items: center
+    img
+      width: 75px
+      height: 75px
+      border-radius: 10%
+    div.text
+      margin-left: 20px
+      p.title
+        font-weight: bold
+        font-size: 30px
+        color: #141414
+      p.description
+        font-size: 20px
+        color: #3C6E71
+  content
+    grid-column: 2 / 3
+    grid-row: 4 / 5
+
+  sidebar
+    grid-column: 4 / 5
+    grid-row: 4 / 5

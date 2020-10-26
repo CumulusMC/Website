@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {{- partial "head.html" . -}}
-  <body>
+  <body class="{{- block "identifier" . -}}{{- end -}}">
     {{- partial "header.html" . -}}
     <main>{{- block "main" . -}}{{- end -}}</main>
     {{- partial "footer.html" -}}

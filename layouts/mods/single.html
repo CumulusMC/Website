@@ -1,3 +1,19 @@
+{{ define "identifier" }}mod{{ end }}
+
 {{ define "main" }}
-  {{ .Title }}
+  <constrainer>
+    <header>
+      <img src="{{ absURL (printf "mods/%s.png" .Params.namespace) }}"></img>
+      <div class="text">
+        <p class="title">{{ .Params.name }}</p>
+        <p class="description">{{ .Params.description }}</p>
+      </div>
+    </header>
+    <content>
+      {{ .Content }}
+    </content>
+    <sidebar>
+      <p>Shit</p>
+    </sidebar>
+  </constrainer>
 {{ end }}

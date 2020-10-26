@@ -5,3 +5,4 @@ title = "Cumulus"
 [permalinks]
   about = "/:filename/"
   contact = "/:filename/"
+  forge = "/:filename/"
