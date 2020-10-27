@@ -14,10 +14,20 @@
 {{ define "main" }}
   <constrainer>
     <header>
-      <img src="{{ absURL (printf "mods/%s.png" .Params.namespace) }}"></img>
-      <div class="text">
-        <p class="title">{{ .Params.name }}</p>
-        <p class="description">{{ .Params.description }}</p>
+      <div class="top">
+        <img src="{{ absURL (printf "mods/%s.png" .Params.namespace) }}"></img>
+        <div class="text">
+          <p class="title">{{ .Params.name }}</p>
+          <p class="description">{{ .Params.description }}</p>
+        </div>
+      </div>
+      <div class="links">
+        {{ if isset .Params "github" }}
+          <a href="{{ .Params.github }}">Github</a>
+        {{ end }}
+        {{ if isset .Params "curse_forge" }}
+          <a href="{{ .Params.curse_forge }}">Curse Forge</a>
+        {{ end }}
       </div>
     </header>
     <content>

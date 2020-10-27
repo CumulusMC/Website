@@ -1,7 +1,9 @@
 +++
-name = "Art of Alchemy"
+name = "Art of Alchemy: Memoriam"
 namespace = "art-of-alchemy"
-description = "An industrial magic mod that allows you to unleash the power of transmutation "
+description = "An industrial magic mod that allows you to unleash the power of transmutation"
+curse_forge = "https://www.curseforge.com/minecraft/mc-mods/art-of-alchemy-memoriam"
+github = "https://www.github.com/CumulusMC/Art-of-Alchemy"
 +++
 
 On Friday, August 21st the Fabric community was notified that Amelia Rose, known to us as SynthRose, had tragically passed away. In the wake of that announcement, the community came together in unity and solidarity to remember SynthRose, her work, and her place in our community.

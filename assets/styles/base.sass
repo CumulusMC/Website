@@ -121,7 +121,7 @@ body >
             background: #3C6E71
   body.mod > main > constrainer
     grid-template-columns: auto minmax(0px, 800px) 20px minmax(0px, 200px) auto
-    grid-template-rows: 40px min-content 20px auto
+    grid-template-rows: 40px min-content 10px auto
     header
       img
         width: 75px
@@ -248,23 +248,25 @@ body >
 
   body.mod > main > constrainer
     grid-template-columns: auto minmax(0px, 800px) auto
-    grid-template-rows: 40px min-content 20px auto 20px auto
+    grid-template-rows: 40px min-content 10px auto 20px auto
     sidebar
       grid-column: 2 / 3
       grid-row: 5 / 6
     header
-      flex-direction: column
-      img
-        width: 150px
-        height: 150px
-      div.text
-        margin-top: 20px
-        margin-left: 0px
+      div.top
+        flex-direction: column
+        img
+          width: 150px
+          height: 150px
+        div.text
+          margin-top: 20px
+          margin-left: 0px
 
 
 content
   p
     margin: 1em 0
+    line-height: 120%
     color: #141414
   h1, h2, h3, h4, h5, h6
     margin: 0.25em 0
@@ -282,18 +284,35 @@ body.mod > main > constrainer
   header
     grid-column: 2 / 3
     grid-row: 2 / 3
-    display: flex
-    align-items: center
-    img
-      border-radius: 10%
-    div.text
-      p.title
-        font-weight: bold
-        font-size: 30px
-        color: #141414
-      p.description
-        font-size: 20px
+    div.top
+      display: flex
+      align-items: center
+      img
+        border-radius: 10%
+      div.text
+        p.title
+          font-weight: bold
+          font-size: 30px
+          color: #141414
+        p.description
+          font-size: 20px
+          color: #3C6E71
+    div.links
+      margin-top: 10px
+      display: flex
+      flex-wrap: wrap
+      a
+        text-decoration: none
+        padding: 5px 10px
+        margin: 0px 5px
+        border: solid 2px #3C6E71
         color: #3C6E71
+        border-radius: 5px
+        display: inline-block
+        font-weight: 600
+      a:hover
+        color: white
+        background: #3C6E71
   content
     grid-column: 2 / 3
     grid-row: 4 / 5
